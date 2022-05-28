@@ -5,11 +5,11 @@ const clickedList = new Array();
 let result = document.getElementById('result');
 result.style.visibility = 'hidden';
 
+
 //1. 클릭한 버튼 아이디 값
 function clickedAns(e) {
     let clickedID = document.getElementById(e.getAttribute('id')).getAttribute('id')
-    console.log(clickedID);
-
+   
 
     if (clickedList.includes(clickedID)) {
         let index = clickedList.indexOf(clickedID);
@@ -42,13 +42,30 @@ function clickedAns(e) {
 
     console.log(clickedList);
 
+
+        
+        
+
     let result = document.getElementById('result');
     if (clickedList.length !== 5) {
         result.style.visibility = 'hidden';
-    } else {
+    } else if (clickedList.length == 5){
         result.style.visibility = 'visible';
+        let clickedValue = new Array();
+
+        for (let k = 0; k < 5; k++){
+            clickedValue.push(answerList[clickedList[k]-1])
+        }
+
+        let intersec = clickedValue.filter(x => truetags.includes(x));
+        console.log(intersec);
+
+        console.log(truetags);
+        console.log(intersec.length);
+        sessionStorage.setItem('length', intersec.length);
     }
 }
+
 
 //순서 섞기
 //배열에 담기
@@ -83,15 +100,54 @@ document.getElementById('8').innerHTML = answerList[7];
 document.getElementById('9').innerHTML = answerList[8];
 document.getElementById('10').innerHTML = answerList[9];
 
-let score = 0;
-for (var i = 0; i < answerList.length; i++) {
-    let ans = answerList[i];
-    // console.log(ans);
-    if (ans in truetags) {
-        // console.log('정답');
-        score += 1;
-    }
-}
-console.log(score);
+
+
+console.log(answerList); //애가 전체 섞은 결과임
+
+// if (clickedList.length == 5) {
+//     console.log("heyy");
+
+//     document.getElementById(String(clickedList[0])).setAttribute('name', 'sel1')
+//     document.getElementById(String(clickedList[1])).setAttribute('name', 'sel2')
+//     document.getElementById(String(clickedList[2])).setAttribute('name', 'sel3')
+//     document.getElementById(String(clickedList[3])).setAttribute('name', 'sel4')
+//     document.getElementById(String(clickedList[4])).setAttribute('name', 'sel5')
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+// for (let i = 0; i < clickedList.length; i++) {
+//     let ans = clickedList[i];
+
+//     console.log(realtruetags);
+//     console.log("hellllllo"); 
+//     console.log(ans);
+    
+//     if (ans in realtruetags) {
+//         console.log('정답');
+//         score += 1;
+//     }
+// }
+
+
 // document.querySelector('#score').innerHTML = score;
-sessionStorage.setItem('score', score);
+
+// localStorage.setItem('score', score);

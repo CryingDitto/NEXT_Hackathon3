@@ -32,7 +32,7 @@ urlpatterns = [
     path('dotest/<int:test_pk>/<int:guest_pk>', views.test_load, name='dotest'),
     # path('result/<int:test_pk>/<int:gtest_pk>', views.test_result, name='result'),
     path('result/<int:test_pk>/<int:guest_pk>', views.test_result, name='result'),
-
+    path('final/<int:number>', views.test_final, name='final')
 
 
     

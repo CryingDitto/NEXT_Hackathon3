@@ -41,8 +41,15 @@
                 <p id='10' class="click" onclick="clickedAns(this)"></p>
                 <br>
             </div>
-        </div>
-        <button type = "submit" id="start">제출하기</button>
+
+            {% comment %} <div id="result">
+                <a href="{% url 'result' test.pk guest.pk %}"><button id="result2">결과 보기</button></a>
+            </div> {% endcomment %}
+
+            <div id="result">
+                <a href="{% url 'result' test.pk guest.pk %}">결과 보기</a>
+            </div>
+        {% comment %} <button type = "submit" id="start">제출하기</button> {% endcomment %}
          
     </div>
 </center>

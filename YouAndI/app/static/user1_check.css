@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'DeogonPrincess';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/DeogonPrincess.woff2') format('woff2');
@@ -5,6 +6,12 @@
     font-style: normal;
 }
 
+* {
+    font-family: 'DeogonPrincess';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/DeogonPrincess.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 html{
     margin:0;
     padding:0;
@@ -15,6 +22,12 @@ html{
 
 .title{
     margin-top:10%;
+    font-size: medium;
+}
+.message{
+
+    margin: 20px 0;
+    padding:10px 0 ;
 }
 
 #testName {
@@ -32,6 +45,8 @@ text-align: center;
 
 color: #FFFFFF;
 }
+
+
 
 #user1Name {
     margin-top:10%;
@@ -69,11 +84,22 @@ text-align: center;
 color: #FFFFFF;
 }
 
-.container {
+#con{
+display: flex;
 
+height:200px;
+}
+.containers{
+    display: flex;
+    margin:10px 0;
+    padding:10px 0;
+
+    top:20px;
+}
+.container {
     right:5%;
     left:5%;
-    position: absolute;
+    /* position: absolute; */
     display:flex;
     flex-grow:1;
     justify-content: center;
