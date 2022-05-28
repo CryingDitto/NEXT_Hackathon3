@@ -13,14 +13,14 @@
         <span id="user1Name">{{test.username.name}}</span>과
         <span id="user2Name">{{guest.name}}</span>는 서로 얼마나 맞을까?
     </p>
-    <p id="score"></p><p>/5</p>
+    <span id="score"></span> <span>/</span><span>5</span>
 
     <br><br>
     <a href="{% url 'main' %}"><button>나도 만들어보기</button></a>
 
 
     <br><br>
-    <a href="./main.html"><button>다른 주제로도 해보기</button></a>
+    {% comment %} <a href="./main.html"><button>다른 주제로도 해보기</button></a> {% endcomment %}
     {% comment %} <a href="{% url %}" type='submit'><button>내 테스트 공유하기</button></a> {% endcomment %}
 </center>
 
@@ -29,9 +29,10 @@
     let tags = ["{{test.truetag1}}", "{{test.truetag2}}", "{{test.truetag3}}", "{{test.truetag4}}", "{{test.truetag5}}", 
     "{{test.falsetag1}}","{{test.falsetag2}}","{{test.falsetag3}}","{{test.falsetag4}}","{{test.falsetag5}}",]
 
-    let truetags = ["{{test.truetag1}}", "{{test.truetag2}}", "{{test.truetag3}}", "{{test.truetag4}}", "{{test.truetag5}}",]
+    const truetags = ["{{test.truetag1}}", "{{test.truetag2}}", "{{test.truetag3}}", "{{test.truetag4}}", "{{test.truetag5}}",]
 </script>
 {% comment %} <script src="{% static 'js/user2_test.js' %}"></script> {% endcomment %}
+<script src="{% static 'js/result.js' %}"></script>
 
 </script>
 </html>
