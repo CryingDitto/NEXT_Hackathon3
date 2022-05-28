@@ -23,7 +23,7 @@ urlpatterns = [
     # path('usersignup', views.user_create, name='usersignup'),
     path('userlogin', views.user_create, name='userlogin'),
     
-    path('testcreate', views.test_create, name='testcreate'),
+    path('testcreate/<int:user_pk>', views.test_create, name='testcreate'),
     path('testcheck/<int:test_pk>', views.test_checksend, name='testcheck'),
 
 
