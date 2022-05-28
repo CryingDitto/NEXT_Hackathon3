@@ -15,7 +15,7 @@
     <br><br>
     
 
-    <form method=="POST" >
+
         <!-- action="{% url 'dotest' test.pk guest.pk %}" -->
         <p id='1' class="click" onclick="clickedAns(this)"></p>
         <p id='2' class="click" onclick="clickedAns(this)"></p><br>
@@ -30,15 +30,17 @@
         
         <br>
         <div id="result">
-            <button id="result" type="submit" href = "{% url 'dotest' test.pk guest.pk %}">결과 보기</button>
+            <a href="{% url 'result' test.pk guest.pk %}"><button id="result">결과 보기</button></a>
         </div>
-    </form>
+
 </center>
 </body>
 
 <script>
     let tags = ["{{test.truetag1}}", "{{test.truetag2}}", "{{test.truetag3}}", "{{test.truetag4}}", "{{test.truetag5}}", 
     "{{test.falsetag1}}","{{test.falsetag2}}","{{test.falsetag3}}","{{test.falsetag4}}","{{test.falsetag5}}",]
+
+    let truetags = ["{{test.truetag1}}", "{{test.truetag2}}", "{{test.truetag3}}", "{{test.truetag4}}", "{{test.truetag5}}",]
 </script>
 <script src="{% static 'js/user2_test.js' %}"></script>
 </html>

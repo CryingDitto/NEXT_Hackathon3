@@ -1,11 +1,6 @@
 const name2 = sessionStorage.getItem("user2Name");
 document.querySelector('#user2Name').innerHTML = name2;
 
-
-// Data from djangox
-// const testData = JSON.parse("{{testJson|escapejs}}");//Usage: testData['truetag1']
-// console.log(testData);
-
 const clickedList = new Array();
 let result = document.getElementById('result');
 result.style.visibility = 'hidden';
@@ -87,3 +82,16 @@ document.getElementById('7').innerHTML = answerList[6];
 document.getElementById('8').innerHTML = answerList[7];
 document.getElementById('9').innerHTML = answerList[8];
 document.getElementById('10').innerHTML = answerList[9];
+
+let score = 0;
+for (var i = 0; i < answerList.length; i++) {
+    let ans = answerList[i];
+    // console.log(ans);
+    if (ans in truetags) {
+        // console.log('정답');
+        score += 1;
+    }
+}
+console.log(score);
+// document.querySelector('#score').innerHTML = score;
+sessionStorage.setItem('score', score);
