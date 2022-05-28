@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby</title>
+</head>
+<body>
+<center>
+    <h3>너가 기침 소리를 내었지?</h3>
+    <p>네가 마구니인지 확인해야겠다!</p>
+
+    <br><br>
+    <a href = "{% url 'guestlogin' test.pk %}">마구니인지 확인하기</a>
+    <button onclick = "clip(); return false;">공유하기</button><br>
+</center>
+</body>
+<script src="../static/js/lobby.js"></script>
+
+</html>

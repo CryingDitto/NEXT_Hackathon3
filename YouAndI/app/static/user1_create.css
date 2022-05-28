@@ -14,10 +14,9 @@ html{
 }
 
 .user1Name{
-    position: absolute;
-left: 40.51%;
-right: 40.77%;
-top: 8.18%;
+    text-align: center;
+top: 20%;
+margin:auto;
 bottom: 84.72%;
 
 font-family: 'Deogon Princess';

@@ -47,7 +47,11 @@ answerList[8] = false4;
 answerList[9] = false5;
 
 //랜덤
+<<<<<<< HEAD
 function shuffle(array){
+=======
+function shuffle(array) {
+>>>>>>> 83288972ace1e9ec0f2878aaa2ee0758faf38ce9
     array.sort(() => Math.random() - 0.5);
 }
 
@@ -63,6 +67,10 @@ document.querySelector('#ans6').innerHTML = answerList[5];
 document.querySelector('#ans7').innerHTML = answerList[6];
 document.querySelector('#ans8').innerHTML = answerList[7];
 document.querySelector('#ans9').innerHTML = answerList[8];
+<<<<<<< HEAD
 document.querySelector('#ans10').innerHTML = answerList[9];
 
 console.log(answerList[0]);
+=======
+document.querySelector('#ans10').innerHTML = answerList[9];
+>>>>>>> 83288972ace1e9ec0f2878aaa2ee0758faf38ce9

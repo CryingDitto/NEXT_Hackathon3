@@ -79,4 +79,11 @@ border: transparent;
     position:absolute;
     top: 65.2%;
     left:1.5%;
+    z-index: 1;
+}
+
+#user1Password{
+    position: absolute;
+    top:90%;
+    z-index:0;
 }
