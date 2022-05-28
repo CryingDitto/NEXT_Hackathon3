@@ -7,11 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="testName"></p>
+<center>
+    <p id="testName">{{test.testname}}</p>
     <br>
-    <p id="here"></p>
+    <p id="user1Name">{{test.username.name}}</p>
     <br>
-    <a href="./result.html"><button>결과 보기</button></a>
+    
+    <span id="ans1">{{test.truetag1}}</span>
+    <span id="ans2">{{test.truetag2}}</span><br>
+    <span id="ans3">{{test.truetag3}}</span>
+    <span id="ans4">{{test.truetag4}}</span><br>
+    <span id="ans5">{{test.truetag5}}</span>
+    <span id="ans6">{{test.falsetag1}}</span><br>
+    <span id="ans7">{{test.falsetag2}}</span>
+    <span id="ans8">{{test.falsetag3}}</span><br>
+    <span id="ans9">{{test.falsetag4}}</span>
+    <span id="ans10">{{test.falsetag5}}</span>
+
+
+
+    <!-- <span id="true1"></span>
+    <span id="true2"></span><br>
+    <span id="true3"></span>
+    <span id="true4"></span><br>
+    <span id="true5"></span>
+    <span id="false1"></span><br>
+    <span id="false2"></span>
+    <span id="false3"></span><br>
+    <span id="false4"></span>
+    <span id="false5"></span> -->
+    
+    <br><br>
+    <a href="{% url 'lobby' test.pk %}"><button>전달하기</button></a>
+
+</center>
 </body>
-<script src="../static/js/user1_check.js"></script>
+{% comment %} <script src="../static/js/user1_check.js"></script> {% endcomment %}
 </html>
