@@ -8,27 +8,28 @@
 </head>
 <body>
 <center>
-    <form id="tag-form">
+    <form id="tag-form" method='POST' action="{% url 'testcreate' %}">
+        {% csrf_token %}
         <p id="user1Name"></p>
         <br>
-        <h4 id="testName">테스트 이름</h4>
-        <input id="testName" type="text">
+        <h4 id="testName" >테스트 이름</h4>
+        <input id="testName" type="text" name='testname'>
         <h4>정답</h4>
-        <input id='true1' type="text">
-        <input id='true2' type="text">
-        <input id='true3' type="text">
-        <input id='true4' type="text">
-        <input id='true5' type="text">
+        <input id='true1' type="text" name='truelike1'>
+        <input id='true2' type="text" name='truelike2'>
+        <input id='true3' type="text" name='truelike3'>
+        <input id='true4' type="text" name='truelike4'>
+        <input id='true5' type="text" name='truelike5'>
 
         <h4>오답</h4>
-        <input id='false1' type="text">
-        <input id='false2' type="text">
-        <input id='false3' type="text">
-        <input id='false4' type="text">
-        <input id='false5' type="text">
+        <input id='false1' type="text" name='falselike1'>
+        <input id='false2' type="text" name='falselike2'>
+        <input id='false3' type="text" name='falselike3'>
+        <input id='false4' type="text" name='falselike4'>
+        <input id='false5' type="text" name='falselike5'>
 
         <br><br>
-        <button type = "submit" id="next" onclick="location.href='./user1_check.html'">다음 단계</button>
+        <button type="submit" id="next" >다음 단계</button>
     </form>
 </center>
 </body>

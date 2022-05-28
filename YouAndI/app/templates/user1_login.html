@@ -8,21 +8,22 @@
 </head>
 <body>
 <center>
-    <form id="create-form">
+    <form id="create-form" method='POST' action='{% url "testcreate" %}'>
+        {% csrf_token %}
         <h3>로그인</h3>
         <label for="user1NickName">닉네임</label>
-        <input id='user1NickName' type="text" required>
+        <input id='user1NickName' type="text" name='username' required>
         <br>
         <label for="user1Password">비밀번호</label>
-        <input id='user1Password' type="password">
+        <input id='user1Password' type="password" name='password'>
         <br>
         <br><br>
         
-        <button type = "submit" id="start" onclick="location.href='./user1_create.html'">시작하기</button>
+        <button type = "submit" id="start">시작하기</button>
         
      </form>
 
 </center>
 </body>
-<script src="../static/js/new_create.js"></script>
+{% comment %} <script src="../static/js/new_create.js"></script> {% endcomment %}
 </html>
