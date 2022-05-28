@@ -10,7 +10,6 @@ def user_create(request):
     if (request.method=="POST"):
         user= User.objects.create(
             name = request.POST['username'],
-            password = request.POST['password'],
         )
         return redirect('testcreate', user.pk)
     
@@ -116,20 +115,34 @@ def test_result(request, test_pk, guest_pk): # , gtest_pk
     #     result += 1
 
     #result -> differnt page
-    # if request.method == 'POST':
-    #     if result == 0:
-    #         return render(request, '')
-    #     elif result == 1:
-    #         return render(request, '')
-    #     elif result == 2:
-    #         return render(request, '')
-    #     elif result == 3:
-    #         return render(request, '')
-    #     elif result == 4:
-    #         return render(request, '')
-    #     elif result == 5:
-    #         return render(request, '')
+    # if result == 0:
+    #     return render(request, '')
+    # elif result == 1:
+    #     return render(request, '')
+    # elif result == 2:
+    #     return render(request, '')
+    # elif result == 3:
+    #     return render(request, '')
+    # elif result == 4:
+    #     return render(request, '')
+    # elif result == 5:
+    #     return render(request, '')
         
 
     return render(request, 'result.html', {'test':test, 'guest':guest, }) #'result':result
 
+def test_final(request, number):
+
+    if number==1:
+        return render(request, 'result1.html')
+    elif number==2:
+        return render(request, 'result2.html')
+    elif number == 3:
+        return render(request, 'result3.html')
+    elif number == 4:
+        return render(request, 'result4.html')
+    elif number == 5:
+        return render(request, 'result5.html')
+    elif number == 6:
+        return render(request, 'result6.html')
+    pass

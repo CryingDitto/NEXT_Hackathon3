@@ -65,7 +65,7 @@ function clickedAns(e) {
         sessionStorage.setItem('length', intersec.length);
     }
 }
-\
+
 
 //순서 섞기
 //배열에 담기

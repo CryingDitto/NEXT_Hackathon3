@@ -1,10 +1,12 @@
+//닉네임 띄워주기
 const name1 = sessionStorage.getItem("user1Name");
-
 document.querySelector('#user1Name').innerHTML = name1;
 
-const tagForm = document.querySelector('#tag-form')
-//input
-const testName = document.querySelector('#testName');
+
+//테스트명, 정답, 오답
+const tagForm = document.querySelector('#tag-form');
+
+const testName = document.querySelector('#testname');
 
 const true1 = document.querySelector('#true1');
 const true2 = document.querySelector('#true2');
@@ -19,14 +21,14 @@ const false4 = document.querySelector('#false4');
 const false5 = document.querySelector('#false5');
 
 
+
 const HIDDEN_CLASSNAME='hidden';
 
 function saveFn(event){
 	event.preventDefault();
 	tagForm.classList.add(HIDDEN_CLASSNAME);
-	// const user1Name = user1Input.value;
-    const TestName = testName.value;
 
+    const TestName = testName.value;
     const True1 = true1.value;
     const True2 = true2.value;
     const True3 = true3.value;
@@ -39,8 +41,10 @@ function saveFn(event){
     const False4 = false4.value;
     const False5 = false5.value;
 
+    
+
 	// setItem
-    sessionStorage.setItem('TestName', TestName);
+    sessionStorage.setItem("TestName", TestName);
 
     sessionStorage.setItem('True1', True1);
     sessionStorage.setItem('True2', True2);
