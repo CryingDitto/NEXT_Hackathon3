@@ -12,14 +12,19 @@ def user_create(request):
             name = request.POST['username'],
             password = request.POST['password'],
         )
-        return redirect('testcreate')
+        return redirect('testcreate', user.pk)
+    
+        # return render(request, 'user1_create.html', {'user':user})
     
     return render(request, 'user1_login.html')
 
 
-def test_create(request):
+def test_create(request, user_pk):
+    userObj = User.objects.get(pk=user_pk)
     if (request.method == "POST"):
+        
         new_test = Test.objects.create(
+            username = userObj,
             testname = request.POST['testname'],
 
             truetag1=request.POST['truelike1'],
@@ -36,7 +41,7 @@ def test_create(request):
         )
         return redirect('testcheck', new_test.pk)
     
-    return render(request, 'user1_create.html')
+    return render(request, 'user1_create.html', {'user':userObj})
 
 def test_checksend(request, test_pk):
     test = Test.objects.get(pk=test_pk)

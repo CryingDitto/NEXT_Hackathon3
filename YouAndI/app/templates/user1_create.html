@@ -8,7 +8,7 @@
 </head>
 <body>
 <center>
-    <form id="tag-form" method='POST' action="{% url 'testcreate' %}">
+    <form id="tag-form" method='POST' action="{% url 'testcreate' user.pk %}">
         {% csrf_token %}
         <p id="user1Name"></p>
         <br>
@@ -33,5 +33,5 @@
     </form>
 </center>
 </body>
-<script src="../static/js/user1_create.js"></script>
+{% comment %} <script src="../static/js/user1_create.js"></script> {% endcomment %}
 </html>

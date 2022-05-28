@@ -13,7 +13,7 @@ class Test(models.Model):
     username = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='tests')
 
-    testname = models.TextField(blank=False)
+    testname = models.TextField()
 
     truetag1 = models.CharField(max_length=30, null=True)
     truetag2 = models.CharField(max_length=30, null=True)
