@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Login</title>
+</head>
+<body>
+<center>
+    <form id="create-form" method='POST' action='{% url "guestlogin" test.pk %}'>
+        {% csrf_token %}
+        <h3>로그인</h3>
+        <label for="user1NickName">닉네임</label>
+        <input id='user1NickName' type="text" name='guestname' required>
+        <br>
+        {% comment %} <label for="user1Password">비밀번호</label>
+        <input id='user1Password' type="password" name='password'> {% endcomment %}
+        <br>
+        <br><br>
+        
+        <button type = "submit" id="start">테스트 시작</button>
+        
+     </form>
+
+</center>
+</body>
+<script src="../static/js/new_create.js"></script>
+</html>

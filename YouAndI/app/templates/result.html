@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
     <title>Document</title>
 </head>
 <body>
+<center>
     <p>
-        <span id="user1Name"></span>과
-        <span id="user2Name"></span>는 서로 얼마나 맞을까?
+        <span id="user1Name">{{test.username}}</span>과
+        <span id="user2Name">{{gtest.username}}</span>는 서로 얼마나 맞을까?
     </p>
-    <p>7/10</p>
-    <p>점수 코멘트</p>
+    <p id="score">{{result}}/5</p>
+
+    <br><br>
+    <a href="./main.html"><button>나도 만들어보기</button></a>
+
+    {{test.username}}
+    {{test.truetag1}}
+    {{test.truetag2}}
+    {{test.truetag3}}
+    {{test.truetag4}}
+    {{test.truetag5}}
+
+    {{gtest.username}}
+    {{gtest.truetag1}}
+    {{gtest.truetag2}}
+    {{gtest.truetag3}}
+    {{gtest.truetag4}}
+    {{gtest.truetag5}}
+
 
     <br><br>
     <a href="./main.html"><button>다른 주제로도 해보기</button></a>
-    <a href=""><button>내 테스트 공유하기</button></a>
+    {% comment %} <a href="{% url %}" type='submit'><button>내 테스트 공유하기</button></a> {% endcomment %}
+</center>
 </body>
-<script src="../static/js/result.js"></script>
+<script>
+    let tags = ["{{test.truetag1}}", "{{test.truetag2}}", "{{test.truetag3}}", "{{test.truetag4}}", "{{test.truetag5}}", 
+    "{{test.falsetag1}}","{{test.falsetag2}}","{{test.falsetag3}}","{{test.falsetag4}}","{{test.falsetag5}}",]
+
+    let truetags = ["{{test.truetag1}}", "{{test.truetag2}}", "{{test.truetag3}}", "{{test.truetag4}}", "{{test.truetag5}}",]
+</script>
+<script src="{% static 'js/user2_test.js' %}"></script>
+
+</script>
 </html>
