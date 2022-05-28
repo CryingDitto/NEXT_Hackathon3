@@ -10,7 +10,6 @@ def user_create(request):
     if (request.method=="POST"):
         user= User.objects.create(
             name = request.POST['username'],
-            password = request.POST['password'],
         )
         return redirect('testcreate', user.pk)
     
