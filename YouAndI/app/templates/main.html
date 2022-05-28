@@ -12,7 +12,8 @@
     <p>규칙 설명</p>
 
     <br><br>
-    <a href="./user1_login.html"><button>새로 생성하기</button></a><br>
+    {% comment %} <a href="{% url 'usersignup' %}"><button>회원가입하기</button></a><br> {% endcomment %}
+    <a href="{% url 'userlogin' %}"><button>로그인하기</button></a><br>
 </center>
 </body>
 </html>
