@@ -1,11 +1,11 @@
-# Next_Hackathon3: Hackathon for 🦁Team 3🐯 마구니들
+# Next_Hackathon3: Hackathon for 🦁Team 3🐯 OneEyedKing
 
 # 너가궁궁예
 친구에게 관심법을 실천하세요.
 
 
 
-# 마구니들 소개
+# OneEyedKing의 마구니들 소개
 
 
 ## 김하경   
